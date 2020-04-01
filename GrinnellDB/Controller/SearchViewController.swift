@@ -485,6 +485,7 @@ class SearchViewController: UITableViewController {
     }
     
     @IBAction func reloginButtonTapped(_ sender: Any) {
+        defaults.removeObject(forKey: "cookie")
         self.performSegue(withIdentifier: "login", sender: sender)
     }
     
